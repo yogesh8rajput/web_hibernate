@@ -1,0 +1,9 @@
+package com.mycompany;
+
+public class Student {
+	
+	int id;
+	String name;
+	double percent;
+
+}
