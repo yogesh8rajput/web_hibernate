@@ -4,19 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Update</title>
 </head>
 <body>
-<form action="Serv" method="get">
+<form>
 <pre>
-
-<input type="text" name="id" placeholder="Enter Your  Rollno">
-<input type="text" name="name" placeholder="Enter Your  Name">
-<input type="text" name="percent" placeholder="Enter Your percento">
-
-
-<input type="submit" value="ok"> 
-
+<h1> Deepu yu are jungleeeee</h1>
+   <input type="text" name="id" placeholder="Enter Your  Rollno">
+  <input type="submit" value="ok"> 
+  
 
 </pre>
 </form>

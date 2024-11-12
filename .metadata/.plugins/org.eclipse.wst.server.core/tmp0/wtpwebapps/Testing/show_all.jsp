@@ -31,7 +31,7 @@ body{
 <%
       Configuration cfg=new Configuration();
       cfg.configure();
-     SessionFactory sf=cfg.buildSessionFactory();
+      SessionFactory sf=cfg.buildSessionFactory();
       Session sess=sf.openSession();
       
       Query q=sess.createQuery("From Student");

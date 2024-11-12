@@ -28,10 +28,12 @@
 			<item value="com.mycompany"/>
 		</list>
 		<list key="groupId">
+			<item value="Testing"/>
 			<item value="web_hiberr"/>
 			<item value="web_hiber"/>
 		</list>
 		<list key="artifactId">
+			<item value="Testing"/>
 			<item value="web_hiberr"/>
 			<item value="web_hiber"/>
 		</list>
