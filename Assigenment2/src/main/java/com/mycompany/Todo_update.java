@@ -1,10 +1,18 @@
 package com.mycompany;
 
 import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.PrintWriter;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * Servlet implementation class Todo_update
@@ -31,9 +39,34 @@ public class Todo_update extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, jakarta.servlet.http.HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter pt=response.getWriter();
+		pt.print("yes");
+		int id =Integer.parseInt(request.getParameter("id"));
+		String na=request.getParameter("name");
+		String ms=request.getParameter("msg");
+		try {
+			Configuration cfg=new Configuration();
+			cfg.configure();
+			SessionFactory sf=cfg.buildSessionFactory();
+			Session sess=sf.openSession();
+			
+			
+			Todo t =new Todo();
+	        t.setId(id);
+			t.setName(na);
+			t.setMsg(ms);
+			Transaction tx=sess.beginTransaction();
+			sess.update(t);
+			tx.commit();
+			sess.close();
+			sf.close();
+//			pt.print("Data Entered");
+		} catch (Exception e) {
+			// eTODO: handle exception
+			pt.print(e.getMessage());
+		}
 	}
 
 }

@@ -7,12 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="Serv" method="get">
+<form action="Todo_insert" method="post">
 <pre>
 
-<input type="text" name="id" placeholder="Enter Your  Rollno">
-<input type="text" name="name" placeholder="Enter Your  Name">
-<input type="text" name="percent" placeholder="Enter Your percento">
+<input type="text" name="id" placeholder="Title____">
+<input type="text" name="name" placeholder=" Your  Title_Name">
+ 
+<textarea rows="6" cols="10" name="msg"> </textarea>
 
 
 <input type="submit" value="ok"> 

@@ -5,23 +5,23 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>Todo_insert</servlet-name>
-  	<display-name>Todo_insert</display-name>
+  	<servlet-name>Delete</servlet-name>
+  	<display-name>Delete</display-name>
   	<description></description>
-  	<servlet-class>com.mycompany.Todo_insert</servlet-class>
+  	<servlet-class>com.mycompany.Delete</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Todo_update</servlet-name>
-  	<display-name>Todo_update</display-name>
+  	<servlet-name>Deletee</servlet-name>
+  	<display-name>Deletee</display-name>
   	<description></description>
-  	<servlet-class>com.mycompany.Todo_update</servlet-class>
+  	<servlet-class>com.mycompany.Delete</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>Todo_insert</servlet-name>
-  	<url-pattern></url-pattern>
+  	<servlet-name>Delete</servlet-name>
+  	<url-pattern>/Delete</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Todo_update</servlet-name>
-  	<url-pattern>/Todo_update</url-pattern>
+  	<servlet-name>Deletee</servlet-name>
+  	<url-pattern>/Deletee</url-pattern>
   </servlet-mapping>
 </web-app>

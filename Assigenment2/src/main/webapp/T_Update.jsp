@@ -12,7 +12,7 @@
 <meta charset="UTF-8">
 <title>Update</title>
 </head>
-<body><form action="Todo_Update" method="post">
+<body><form action="Todo_update" method="post">
 <pre>
 <% int t_id = Integer.parseInt(request.getParameter("id")); 
 Configuration cfg=new Configuration();
@@ -32,8 +32,8 @@ for(Todo d:li)
 <input type="text" name="id" placeholder="Title____" value="<%out.print(t_id);%>">
 <input type="text" name="name" placeholder=" Your  Title_Name" value="<%=d.getName()%>">
  
-<textarea rows="6" cols="10" name="msg"  value="<%=d.getMsg()%>"> Msg</textarea>
-
+<input type="text" name="msg" placeholder=" Your  Title_Name" value="<%=d.getMsg()%>">
+ 
 
 <input type="submit" value="ok"> 
 
