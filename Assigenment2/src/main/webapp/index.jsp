@@ -1,24 +1,31 @@
 <html>
 
 <style>
-body{
-     color:black;
-     background-color: yellow;
-     text-decoration: none;
-     
-}
-a{
-text-decoration: none;
-}
-h1{
-gap:3rem;
+body {
+	color: black;
+	background-color: yellow;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
 }
 
+a {
+	text-decoration: none;
+	
+}
+
+div{
+     color: blue;
+     background-color: green;
+     align-items: center;
+}
 </style>
 <body>
-<h1>
-<a href="Insert.jsp">Insert   </a><br>
-<a href="Show_all_task.jsp">All_Task</a>
-</h1>
+	<h1>
+		<div>
+			<a href="Insert.jsp">Insert </a><br> 
+			<a href="Show_all_task.jsp">All_Task</a>
+		</div>
+	</h1>
 </body>
 </html>

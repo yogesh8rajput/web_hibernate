@@ -17,15 +17,26 @@
 <title>Show_All</title>
 <style>
 body{
-      color:wheat;
-      background: black;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
 }
+
+    table{
+     background-color: white;
+     color: green;
+    
+     
+    }
+   
+   
 </style>
 </head>
 <body>
 
 <h1>All Task Reminder</h1>
-<table border="3">
+<table border="1">
 <tr>
 <td>No.</td>
 <td>Title_Name</td>
