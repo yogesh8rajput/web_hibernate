@@ -25,6 +25,10 @@ div{
 		<div>
 			<a href="Insert.jsp">Insert </a><br> 
 			<a href="Show_all_task.jsp">All_Task</a>
+	 <form action="Search" method="post" name="name"><input type="text" name="name" placeholder="search here">
+	 <input type="submit" value="Submit......" >
+		</form>
+	
 		</div>
 	</h1>
 </body>

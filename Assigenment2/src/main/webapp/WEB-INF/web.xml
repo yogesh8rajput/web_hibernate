@@ -16,6 +16,12 @@
   	<description></description>
   	<servlet-class>com.mycompany.Delete</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Search</servlet-name>
+  	<display-name>Search</display-name>
+  	<description></description>
+  	<servlet-class>com.mycompany.Search</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Delete</servlet-name>
   	<url-pattern>/Delete</url-pattern>
@@ -23,5 +29,9 @@
   <servlet-mapping>
   	<servlet-name>Deletee</servlet-name>
   	<url-pattern>/Deletee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Search</servlet-name>
+  	<url-pattern></url-pattern>
   </servlet-mapping>
 </web-app>

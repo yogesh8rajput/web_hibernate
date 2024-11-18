@@ -2,30 +2,30 @@ package com.mycompany;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import org.hibernate.Session;
-import org.hibernate.cfg.Configuration;
-
-
-import com.mysql.cj.xdevapi.SessionFactory;
 import org.hibernate.SessionFactory;
-import jakarta.servlet.http.HttpServlet;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class serv
+ * Servlet implementation class Search
  */
-@WebServlet("/serv")
-public class serv extends HttpServlet {
+@WebServlet("/Search")
+public class Search extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public serv() {
+    public Search() {
         // TODO Auto-generated constructor stub
     }
 
@@ -34,16 +34,7 @@ public class serv extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		PrintWriter	pw=response.getWriter();
-//		pw.print("done");
-		int roll=Integer.parseInt(request.getParameter("roll"));
-		String name= request.getParameter("name");
-		double percent=Double.parseDouble(request.getParameter("percent"));
-		Configuration cfg=new Configuration();
-		cfg.configure();
-		
-		org.hibernate.SessionFactory sf=cfg.buildSessionFactory();
-		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -51,7 +42,29 @@ public class serv extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		PrintWriter pt=response.getWriter();
+		try {
+			
+//			pt.print("Done");
+			String naam=request.getParameter("name");
+			Configuration cfg=new Configuration();
+			cfg.configure();
+			SessionFactory sf=cfg.buildSessionFactory();
+			Session sess=sf.openSession();
+			
+			  Query<Todo> q=sess.createQuery("From Todo where name like :na");
+			  q.setParameter("na", "%"+naam+"%");
+			  List<Todo> li=q.list();
+			  for (Todo t : li) {
+				  
+				pt.println("<h1>"+t.getId()+":"+t.getName()+":"+t.getMsg()+"</h1>");
+			  }	
+			  
+		} catch (Exception e) {
+			   pt.print(e.getMessage());
+		
+		}
+		
 	}
 
 }
