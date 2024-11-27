@@ -89,7 +89,7 @@
                 SessionFactory sf = cfg.buildSessionFactory();
                 Session sess = sf.openSession();
 
-                Query<Todo> query = sess.createQuery("FROM Todo", Todo.class);
+                Query<Todo> query = sess.createQuery("FROM Todo");
                 List<Todo> tasks = query.list();
 
                 // Loop through the list and display tasks in the table
