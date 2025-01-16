@@ -26,10 +26,10 @@
  	sess.delete(t);
  	tx.commit();
  	//System.out.println("Deleted");
-     
+     response.sendRedirect("index.jsp");
      
      
 %>
-       <a href="index.jsp">Home</a>
+       <a href="Show_all_task.jsp">Home</a>
 </body>
 </html>

@@ -59,9 +59,10 @@ public class Todo_insert extends HttpServlet {
 		Transaction tx=sess.beginTransaction();
 		sess.save(t);
 		tx.commit();
+		response.sendRedirect("index.jsp");
 		sess.close();
 		sf.close();
-		pt.print("Data Entered");
+		//pt.print("Data Entered");
 	}
 
 }

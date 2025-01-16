@@ -59,16 +59,16 @@
         }
 
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-     <div>
+  <!--    Search operation  <div>
       <form action="Search" method="post" name="name"><input type="text" name="name" placeholder="search here">
 	 <input type="submit" value="Submit......" >
 		</form>
-     </div>
+     </div>   -->
     <h1>All Task Reminder</h1>
 
     <table>
@@ -77,6 +77,7 @@
                 <th>No.</th>
                 <th>Title</th>
                 <th>Message</th>
+                <th>Status</th>
                 <th>Action</th>
                 <th>Action 2</th>
             </tr>
@@ -99,8 +100,11 @@
                 <td><%= task.getId() %></td>
                 <td><%= task.getName() %></td>
                 <td><%= task.getMsg() %></td>
-                <td><a href="T_Delete.jsp?id=<%= task.getId() %>">Delete</a></td>
+                  <td><a href="Status.jsp?id=<%=task.getId()%>&status=<%=task.getStatus()%>"  <%=task.getStatus() == 0 ? "red" : "green" %>;"><%= task.getStatus() == 0?"Pending" : "Completed"%></a></td>
+			
+                 <td><a href="T_Delete.jsp?id=<%= task.getId() %>">Delete</a></td>
                 <td><a href="T_Update.jsp?id=<%= task.getId() %>">Edit</a></td>
+              
             </tr>
             <%
                 }
@@ -108,6 +112,6 @@
             %>
         </tbody>
     </table>
-
+<a href="index.jsp">Home</a>
 </body>
 </html>

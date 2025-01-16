@@ -22,6 +22,18 @@
   	<description></description>
   	<servlet-class>com.mycompany.Search</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>status</servlet-name>
+  	<display-name>status</display-name>
+  	<description></description>
+  	<servlet-class>com.mycompany.status</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Sstatus</servlet-name>
+  	<display-name>Sstatus</display-name>
+  	<description></description>
+  	<servlet-class>com.mycompany.Sstatus</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Delete</servlet-name>
   	<url-pattern>/Delete</url-pattern>
@@ -33,5 +45,13 @@
   <servlet-mapping>
   	<servlet-name>Search</servlet-name>
   	<url-pattern></url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>status</servlet-name>
+  	<url-pattern>/status</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Sstatus</servlet-name>
+  	<url-pattern>/Sstatus</url-pattern>
   </servlet-mapping>
 </web-app>

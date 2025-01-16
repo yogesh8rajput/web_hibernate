@@ -8,7 +8,7 @@
         /* General body styles */
         body {
             font-family: Arial, sans-serif;
-            background-color: #FFEB3B; /* Light yellow */
+           
             color: #333;
             display: flex;
             justify-content: center;
@@ -33,12 +33,12 @@
         }
 
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         /* Container for the links and form */
         .container {
-            background-color: #4CAF50; /* Green */
+            background-color: wheat; /* Green */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -61,6 +61,7 @@
 
         .search-form input[type="submit"] {
             padding: 10px 20px;
+            margin-top:20px;
             background-color: #0277BD;
             color: white;
             border: none;
@@ -90,6 +91,8 @@
             <input type="submit" value="Search">
         </form>
     </div>
+    
+     <%@include file="Show_all_task.jsp"%>
 
 </body>
 </html>
