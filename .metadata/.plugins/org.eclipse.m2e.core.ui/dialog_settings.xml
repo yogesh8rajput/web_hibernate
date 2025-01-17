@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\webApplication\Assigenment2"/>
 			<item value="D:\webApplication\Testing\src\main\webapp\Edit.jsp"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -26,15 +27,21 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="testt.testt"/>
+			<item value="com.todo"/>
 			<item value="com.mycompany"/>
 		</list>
 		<list key="groupId">
+			<item value="testt"/>
+			<item value="Todo_List"/>
 			<item value="Assigenment2"/>
 			<item value="Testing"/>
 			<item value="web_hiberr"/>
 			<item value="web_hiber"/>
 		</list>
 		<list key="artifactId">
+			<item value="testt"/>
+			<item value="Todo_List"/>
 			<item value="Assigenment2"/>
 			<item value="Testing"/>
 			<item value="web_hiberr"/>
